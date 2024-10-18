@@ -40,14 +40,6 @@ public:
 	Rect Update(AnimationNames _name, float _deltaTime);
 	int GetCurrentClip(AnimationNames _name);
 
-	//////////////////////////////////////////////////////
-	// accessor
-	// Return a reference if you want to allow modifications
-	std::map<AnimationNames, SpriteAnim*>& GetAnimations() {
-		return m_animations;
-	}
-	//////////////////////////////////////////////////////
-	
 
 	//Members
 	static ObjectPool<SpriteSheet>* Pool;

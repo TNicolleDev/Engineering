@@ -1,9 +1,16 @@
 ﻿          1 file(s) copied.
           1 file(s) copied.
   GameController.cpp
-C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\GameController.cpp(24,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\GameController.cpp(79,13): error C2146: syntax error: missing ';' before identifier 'r'
-C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\GameController.cpp(81,133): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\GameController.cpp(81,98): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\GameController.cpp(83,135): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\GameController.cpp(83,99): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  Level.cpp
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(47,56): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(47,25): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(47,14): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(49,61): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(49,28): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(49,14): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(51,57): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(51,26): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\tenes\Documents\GameDesign\SDLLevels\SDLLevels\Level.cpp(51,14): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  SpriteSheet.cpp
+  Generating Code...
+  SDLLevels.vcxproj -> C:\Users\tenes\Documents\GameDesign\SDLLevels\Debug\SDLLevels.exe
