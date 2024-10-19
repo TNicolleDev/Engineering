@@ -13,7 +13,8 @@ public:
     // Accessors
     short GetClipCurrent() { return (short)m_clipCurrent; }
     float GetClipSpeed() { return (float)m_clipSpeed; }
-    float SetClipSpeed(float _clipSpeed) { m_clipSpeed = _clipSpeed; }
+    void SetClipSpeed(float _clipSpeed) { m_clipSpeed = _clipSpeed; }  // Updated to return void
+
     // Methods
     virtual void Serialize(std::ostream& _stream);
     virtual void Deserialize(std::istream& _stream);
@@ -24,7 +25,8 @@ public:
     void Update(float _deltaTime);
 
     // Members
-    static ObjectPool<SpriteAnim>* Pool;//manage instances of SpriteAnim objects. reuse and reduce memory allocation overhead
+    static ObjectPool<SpriteAnim>* Pool;  // Manage instances of SpriteAnim objects, reuse and reduce memory allocation overhead
+
 
 private:
     // Members

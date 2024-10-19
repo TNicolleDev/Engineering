@@ -5,6 +5,8 @@
 #include "TTFont.h"
 #include "Timing.h"
 #include "Level.h"
+#include <cstdlib>  // for rand() and srand()
+#include <ctime>    // for time()
 
 
 GameController::GameController()
@@ -23,10 +25,17 @@ GameController::~GameController()
 
 // Timing made by professor
 Timing* t = &Timing::Instance();
+
 // I made this maybe relocate it later..
-int RandomNumber(int min, int max)
+float RandomNumber(float min, float max)
 {
-    int random = (min + rand() % (max - min + 1));
+    // Ensure the min is less than max
+    if (min > max) {
+        std::swap(min, max);
+    }
+
+    // Generate a random float in the range [min, max)
+    float random = min + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (max - min)));
 
     return random;
 }
@@ -52,8 +61,22 @@ void GameController::RunGame()
     // this maps to our warrior tga file.
     sheet->SetSize(17, 6, 69, 44);
 
+    // makes ever random number random again
+    srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
+
     sheet->AddAnimation(EN_AN_IDLE, 0, 6, 6.0f);
-    sheet->AddAnimation(EN_AN_RUN, 6, 7, 6.0f);
+    sheet->AddAnimation(EN_AN_RUN, 6, 7,  RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN1, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN2, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN3, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN4, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN5, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN6, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN7, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN8, 6, 7, RandomNumber(4.8f, 6.0f));
+    sheet->AddAnimation(EN_AN_RUN9, 6, 7, RandomNumber(4.8f, 6.0f));
+
+
     Level* level = new Level(sheet, r, font);
     //const float scale = 1.8f; // Scale factor for width and height
     //const int spriteWidth = 69;  // Width of each sprite from SetSize

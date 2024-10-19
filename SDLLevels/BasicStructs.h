@@ -37,7 +37,7 @@ struct Point
 
 struct Rect
 {
-	Rect(unsigned int _x1, unsigned int _y1, unsigned int _x2, unsigned int _y2)
+	Rect(float _x1, unsigned int _y1, float _x2, unsigned int _y2)
 	{
 		X1 = _x1;
 		Y1 = _y1;

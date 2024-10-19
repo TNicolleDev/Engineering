@@ -98,3 +98,20 @@ void SpriteSheet::ToString() {
     cout << "  ClipSizeY: " << (int)m_clipSizeY << endl;
     Resource::ToString();
 }
+
+// Getter for animation clip speed
+float SpriteSheet::GetAnimationSpeed(AnimationNames _name) const {
+    auto it = m_animations.find(_name);
+    if (it != m_animations.end()) {
+        return it->second->GetClipSpeed();  // Access the clip speed via SpriteAnim
+    }
+    return -1.0f;  // Return an invalid value if animation is not found
+}
+
+// Setter for animation clip speed
+void SpriteSheet::SetAnimationSpeed(AnimationNames _name, float newSpeed) {
+    auto it = m_animations.find(_name);
+    if (it != m_animations.end()) {
+        it->second->SetClipSpeed(newSpeed);  // Set the new clip speed via SpriteAnim
+    }
+}
